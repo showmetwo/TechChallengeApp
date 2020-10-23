@@ -73,7 +73,6 @@ func RebuildDb(cfg Config) error {
 WITH
 OWNER = %s
 ENCODING = 'UTF8'
-TABLESPACE = pg_default
 CONNECTION LIMIT = -1
 TEMPLATE template0;`, cfg.DbName, strings.Split(cfg.DbUser,"@")[0])
 
